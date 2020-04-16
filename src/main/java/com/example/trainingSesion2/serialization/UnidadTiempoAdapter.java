@@ -9,12 +9,12 @@ public class UnidadTiempoAdapter implements JsonDeserializer<UnidadTiempo>, Json
     @Override
     public UnidadTiempo deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
         String value = jsonElement.getAsString();
-        return UnidadTiempo.of(value);
+        return UnidadTiempo.valueOf(value);
     }
 
     @Override
     public JsonElement serialize(UnidadTiempo unidadTiempo, Type type, JsonSerializationContext jsonSerializationContext) {
-        String value = unidadTiempo.getValue();
+        String value = unidadTiempo.name();
         return new JsonPrimitive(value);
     }
 }

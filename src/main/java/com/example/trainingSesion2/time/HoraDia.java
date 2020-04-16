@@ -1,5 +1,6 @@
 package com.example.trainingSesion2.time;
 
+import com.example.trainingSesion2.configuration.UniTime;
 import com.example.trainingSesion2.preconditions.Preconditions;
 import lombok.Value;
 
@@ -8,9 +9,9 @@ public class HoraDia {
     Hora hora;
     Minuto minuto;
     Segundo segundo;
-    UnidadTiempo unidadTiempo;
+    Long unidadTiempo;
 
-    public HoraDia(Hora hora, Minuto minuto, Segundo segundo, UnidadTiempo unidadTiempo) {
+    public HoraDia(Hora hora, Minuto minuto, Segundo segundo, Long unidadTiempo) {
         Preconditions.checkNotNull(hora);
         Preconditions.checkNotNull(minuto);
         Preconditions.checkNotNull(segundo);
