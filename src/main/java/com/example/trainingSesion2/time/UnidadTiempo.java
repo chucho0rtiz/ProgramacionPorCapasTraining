@@ -21,28 +21,16 @@ public enum UnidadTiempo {
                 long value1 = hora;
                 return value1;
             case Minutos:
-                long value2 = hora*60;
+                long value2 = (hora*60)+minuto;
                 return value2;
             case Segundos:
-                long value3 = ((minuto*60)+((hora*60)*60));
+                long value3 = ((minuto*60)+((hora*60)*60)+segundo);
                 return value3;
             case Milisegundos:
-                long value4 = ((segundo*1000)+((minuto*60)*1000)+(((hora*60)*60)*1000));
+                long value4 = ((segundo*1000)+((minuto*60)*1000)+(((hora*60)*60)*1000)+milisegundo);
                 return value4;
             default:
                 throw new UnsupportedOperationException();
         }
     }
 }
-
-/*@Value(staticConstructor = "of")
-public class UnidadTiempo {
-    String value;
-
-    private UnidadTiempo(String value){
-        Preconditions.checkNotNull(value);
-        Preconditions.checkArgument(value.equals("Milisegundos") || value.equals("Segundos") ||
-                value.equals("Minutos") || value.equals("Horas"));
-        this.value = value;
-    }
-}*/

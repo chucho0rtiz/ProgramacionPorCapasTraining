@@ -7,11 +7,11 @@ import lombok.Value;
 @Value(staticConstructor = "from")
 public class HoraDia {
     Hora hora;
-    Minuto minuto;
-    Segundo segundo;
+    IntegerGeneric minuto;
+    IntegerGeneric segundo;
     Long unidadTiempo;
 
-    public HoraDia(Hora hora, Minuto minuto, Segundo segundo, Long unidadTiempo) {
+    public HoraDia(Hora hora, IntegerGeneric minuto, IntegerGeneric segundo, Long unidadTiempo) {
         Preconditions.checkNotNull(hora);
         Preconditions.checkNotNull(minuto);
         Preconditions.checkNotNull(segundo);

@@ -20,9 +20,8 @@ public class DateTimeController {
     private HoraDia time(){
         LocalTime time = LocalTime.now();
         Hora hora = Hora.of(time.getHour());
-        Minuto minuto = Minuto.of(time.getMinute());
-        Segundo segundo = Segundo.of(time.getSecond());
-        //UnidadTiempo unidadTiempo = UnidadTiempo.of("Horas");
+        IntegerGeneric minuto = IntegerGeneric.of(time.getMinute());
+        IntegerGeneric segundo = IntegerGeneric.of(time.getSecond());
         Long mediaNoche = UnidadTiempo.time(UnidadTiempo.valueOf(uniTime.getTiempo()), time);
         return HoraDia.from( hora, minuto, segundo , mediaNoche);
     }

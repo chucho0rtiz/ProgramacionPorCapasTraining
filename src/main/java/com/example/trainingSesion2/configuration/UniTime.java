@@ -11,5 +11,5 @@ import org.springframework.context.annotation.Configuration;
 @RequiredArgsConstructor
 @Data
 public class UniTime {
-    String tiempo;
+    private String tiempo;
 }
